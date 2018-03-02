@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <p>Movie trailer</p>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <img src="#">
+    </div>
+    <div class="col-md-6">
+      <a class="btn btn-warning" (click)='onBack()'>Back</a>
+      <h2>{{ film.film }}</h2>
+      <ul>
+        <li><span>Showing Dates </span> : {{ film.time | date: 'fullDate' }}</li>
+        <li><span>Showing Times</span> : {{ film.time | date: 'shortTime' }}</li>
+        <li><span>Classification</span> : 12A</li>
+      </ul>
+      <button class="btn btn-info" (click)="onBuyTickets()">Buy Tickets</button>
+    </div>
+  </div>
+</div>

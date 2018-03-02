@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <th>Film</th>
+        <th>Showing Dates</th>
+        <th>Showing Times</th>
+      </thead>
+      <tbody>
+        <tr *ngFor ='let film of films'>
+          <td>
+            <a [routerLink]="['/films', film.id]">
+            {{ film.film }}
+            </a>
+          </td>
+          <td>{{ film.time | date: 'fullDate' }}</td>
+          <td>{{ film.time | date: 'shortTime' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
